@@ -9,5 +9,9 @@ var mazeOut = {
 		//console.clear();
     console.log (text);
     mazeOut.mazeLog (text)
+	},
+
+	updateScore: function (score) {
+		document.getElementById("score-span").innerText = "Score: " + score;
 	}
 }

@@ -1,0 +1,64 @@
+.main {
+  width: 75%;
+  background-color: #ccc;
+
+  box-shadow: 5px 5px #aaa;
+  border-radius: 5px;
+
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  border-radius: 5px;
+}
+
+.gameControls {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 25px;
+}
+
+.game-ctrl{
+  flex-grow: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ctrl{
+  display: inline-block;
+  width: 50px;
+}
+
+.key {
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+  content: "";
+  display: inline-block;
+
+  margin-left: 5px;
+}
+
+.key-left {
+  background-image: url('/images/left-arrow.png');
+}
+.key-right {
+  background-image: url('/images/right-arrow.png');
+}
+.key-up {
+  background-image: url('/images/up-arrow.png');
+}
+.key-down {
+  background-image: url('/images/down-arrow.png');
+}
+
+.bottom-row{
+  height: 50px;
+  text-align: center;
+}
+.play-button{
+  text-align: center;
+}

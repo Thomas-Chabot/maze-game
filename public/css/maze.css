@@ -1,3 +1,15 @@
 .maze-main{
   font-family: monospace;
 }
+
+.scoreboard {
+  float: right;
+  text-align: center;
+
+  width: 100px;
+  background-color: #ccc;
+}
+
+.score {
+  
+}

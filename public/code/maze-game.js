@@ -68,7 +68,7 @@ function moved(maze, player){
 	if (maze[player.c][player.r] == 2){
 		maze[player.c][player.r] = 4; // mark as an 'already won' spot, don't win again
 		console.log("You won!");
-		gameWin();
+		gameWin(player);
 	}
 }
 // Up: 38
@@ -97,16 +97,19 @@ function attemptWalk(maze, player, key) {
 	moved(maze, n);
 	return n;
 }
-function gameWin(){
+function gameWin(player){
 	console.clear();
-	setTimeout(gameStart,1000);
+	setTimeout(gameStart,1000,player);
 }
-function gameStart(){
+function gameStart(player){
 	var maze = mazeGen(41, 41);
 	var player = {
 		c: 1,
-		r: 1
+		r: 1,
+		score: player ? player.score + 1 : 0
 	}
+
+	mazeOut.updateScore (player.score);
 	outputMaze(maze, player);
 	document.onkeydown=function(key){ player = attemptWalk(maze, player, key);}
 }
